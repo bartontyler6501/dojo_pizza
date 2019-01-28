@@ -1,40 +1,32 @@
-<div class="row">
+<!-- <div class="row">
   <h4>Register:</h4>
 </div>
-<div *ngIf="firsttimetopage" ></div>
+<div *ngIf="firsttimetopage" >
     <form (submit)="RegisterForm()" method="POST">
-      <div class="row">
-        <div class="col-2">
-        </div>
-      
-            <div class="col-4">
+
+        
+
 
               <p *ngIf="errorL">{{data}}</p>
               <H3>Register</H3>
               <p>First Name: </p><input type="text" name="newUser.f_name" [(ngModel)]="newUser.f_name">
-              Last Name:
+             <p>Last Name:</p>
               <input type="text" name="newUser.l_name" [(ngModel)]="newUser.l_name">
-              Email:
+              <p> Email:</p>
               <input type="email" name="newUser.email" [(ngModel)]="newUser.email">
-              Address:
+              <p> Address:</p>
               <input type="text" name="newUser.address" [(ngModel)]="newUser.address">
-              Password:
+              <p> Password:</p>
               <input type="text" name="newUser.password" [(ngModel)]="newUser.password">
 
-          </div>
-          
-          <div class="row">
-            <div class="col-2">
               <input type="submit" value="Register Now">
-            </div>
-          </div>
-        </form>
+
+    </form>
 </div>
-<button onclick="Turnon()"
+<button onclick="Turnon()">Turn on</button>
 <div *ngIf="ImaUser">
   <form (submit)="LoginForm(id)" method="POST">
     <h3>Login:</h3>
     <input type="text" name="newUser.email" [(ngModel)]="newUser.email">
     <input type="text" name="newUser.password" [(ngModel)]="newUser.password">
-  </form>
-</div>
+  </form> -->
