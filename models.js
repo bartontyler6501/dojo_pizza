@@ -15,7 +15,7 @@ PizzaTable = mongoose.model('Pizza', PizzaSchema);
 
 const UserSchema = new mongoose.Schema({
         name: {type: String, required: [true, "First name is required"], minlength: [3, "First Name must have at least 4 characters."]},
-        Type: {type: String, required: [true, "Last Name is required"], minlength: [3, "Last Namemust have at least 4 characters."]},
+        Type: {type: String, required: [true, "Last Name is required"], minlength: [3, "Last Name must have at least 4 characters."]},
         email: {type: String, required: [true, "Email is required"], Email: [3, "Description must have at least 4 characters."]},
         //Add google api if there is enough time at the end
         address: {type: String, required: [true, "First name is required"]},
