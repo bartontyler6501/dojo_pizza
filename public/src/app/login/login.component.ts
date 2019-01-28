@@ -23,29 +23,29 @@ constructor(private _httpService: HttpService,
             private _route: ActivatedRoute,
             private _router: Router)
             {
-              this.LoadPage();
+            //  this.LoadPage();
             }
 
   ngOnInit() {
   }
-LoadPage(){
+// LoadPage(){
 
+// }
+// RegisterForm(){
+//   let obs = this._httpService.newUser(this.newUser);
+//   obs.subscribe(data=>{
+//     if(data['errors']){
+//       this.errorL = data['errors']
+//     }
+//     else{
+//       this._router.navigate(['/'])
+//     }
+//   })
+// LoginForm(id){
+//   if(this.email = this.HttpService)
+// }
+// Turnon(){
+//  this.boo = true;
+// }
 }
-RegisterForm(){
-  let obs = this._httpService.newUser(this.newUser);
-  obs.subscribe(data=>{
-    if(data['errors']){
-      this.errorL = data['errors']
-    }
-    else{
-      this._router.navigate(['/'])
-    }
-  })
-LoginForm(id){
-  if(this.email = this.HttpService)
-}
-Turnon(){
- this.boo = true;
-}
-}
-}
+
