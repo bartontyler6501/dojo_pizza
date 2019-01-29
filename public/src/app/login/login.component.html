@@ -1,32 +1,42 @@
-<!-- <div class="row">
-  <h4>Register:</h4>
-</div>
-<div *ngIf="firsttimetopage" >
-    <form (submit)="RegisterForm()" method="POST">
+<br>
+<br>
+<br>
+<br>
+
+<div *ngIf="boo" >
+    <form (submit)="register()">
 
         
 
 
-              <p *ngIf="errorL">{{data}}</p>
+              
               <H3>Register</H3>
-              <p>First Name: </p><input type="text" name="newUser.f_name" [(ngModel)]="newUser.f_name">
+              <p>First Name: </p><input type="text" name="newUser.f_name" [(ngModel)]="newUser.firstName">
              <p>Last Name:</p>
-              <input type="text" name="newUser.l_name" [(ngModel)]="newUser.l_name">
+              <input type="text" name="newUser.l_name" [(ngModel)]="newUser.lastName">
               <p> Email:</p>
               <input type="email" name="newUser.email" [(ngModel)]="newUser.email">
               <p> Address:</p>
               <input type="text" name="newUser.address" [(ngModel)]="newUser.address">
               <p> Password:</p>
               <input type="text" name="newUser.password" [(ngModel)]="newUser.password">
-
+              <br>
               <input type="submit" value="Register Now">
 
     </form>
 </div>
-<button onclick="Turnon()">Turn on</button>
-<div *ngIf="ImaUser">
-  <form (submit)="LoginForm(id)" method="POST">
+<button (click)="Turnon()">1st time user?</button>
+<br>
+<button (click)="Turnon1()">Login</button>
+
+<div *ngIf="two">
+  <form (submit)="LoginForm(id)" >
     <h3>Login:</h3>
+    <h4>Email:</h4>
     <input type="text" name="newUser.email" [(ngModel)]="newUser.email">
+    <h4>Password:</h4>
     <input type="text" name="newUser.password" [(ngModel)]="newUser.password">
-  </form> -->
+    <br>
+    <input type="submit" value="Login Now">
+  </form>
+</div>

@@ -9,16 +9,17 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-newUser = {f_name:"",
-l_name:"",
+newUser = {firstName:"",
+lastName:"",
 Description:"",
 email:"",
 address:"",
 password:"",}
-
-
+two:any;
+loading:any;
 errorL;
 boo:any;
+model= {};
 constructor(private _httpService: HttpService,
             private _route: ActivatedRoute,
             private _router: Router)
@@ -44,8 +45,38 @@ constructor(private _httpService: HttpService,
 // LoginForm(id){
 //   if(this.email = this.HttpService)
 // }
-// Turnon(){
-//  this.boo = true;
-// }
+Turnon(){
+ this.boo = true;
+ this.two =false;
+}
+Turnon1(){
+  this.two = true;
+  this.boo = false;
+ }
+register() {
+  
+  let obs = this._httpService.newUser(this.newUser)
+      obs.subscribe( data => {
+        console.log("NEWUSER!!!!")
+        console.log(data)
+              this._router.navigate(['/']);
+          },
+          error => {
+              this._httpService.error(error);
+              this._router.navigate(['/']);
+          });
+}
+login(_id) {
+  this.loading = true;
+  this._httpService.Allusers(this.newUser)
+      .subscribe(
+          data => {
+              this._router.navigate(['/']);
+          },
+          error => {
+              this._httpService.error(error);
+              this.loading = false;
+          });
+}
 }
 
