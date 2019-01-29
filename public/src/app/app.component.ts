@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,10 @@ export class AppComponent {
     this.current = 'home';
     this._router.navigate(['/']);
   }
-
+  login() {
+    this.current = 'login';
+    this._router.navigate(['/login']);
+  }
   order() {
     this.current = 'order';
     this._router.navigate(['/order']);

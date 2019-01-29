@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService} from '../http.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { first } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-login',
@@ -16,16 +19,19 @@ email:"",
 address:"",
 password:"",}
 two:any;
-loading:any;
+loading = false;
 errorL;
 boo:any;
 model= {};
+USER =  {email: "",
+  password: ""
+
+}
+message:any;
 constructor(private _httpService: HttpService,
             private _route: ActivatedRoute,
-            private _router: Router)
-            {
-            //  this.LoadPage();
-            }
+            private _router: Router,) { }
+
 
   ngOnInit() {
   }
@@ -66,17 +72,24 @@ register() {
               this._router.navigate(['/']);
           });
 }
-login(_id) {
+login() {
   this.loading = true;
-  this._httpService.Allusers(this.newUser)
-      .subscribe(
+  let obs = this._httpService.LoginUser(this.USER.email, this.USER.password)
+      obs.subscribe(
           data => {
-              this._router.navigate(['/']);
-          },
+              if(data != null){
+                this._router.navigate([['/']]);
+                console.log("Im logged in")
+                console.log("This user is logged in" , data)
+              }
+              else{
+                console.log("you are not a user")
+              }
+        },
+              
           error => {
-              this._httpService.error(error);
+            this.message =  this._httpService.error(error);
               this.loading = false;
           });
 }
 }
-

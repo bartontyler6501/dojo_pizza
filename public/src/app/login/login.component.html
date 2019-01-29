@@ -30,12 +30,12 @@
 <button (click)="Turnon1()">Login</button>
 
 <div *ngIf="two">
-  <form (submit)="LoginForm(id)" >
+  <form (submit)="login()" >
     <h3>Login:</h3>
     <h4>Email:</h4>
-    <input type="text" name="newUser.email" [(ngModel)]="newUser.email">
+    <input type="text" name="USER.email" [(ngModel)]="USER.email">
     <h4>Password:</h4>
-    <input type="text" name="newUser.password" [(ngModel)]="newUser.password">
+    <input type="password" name="USER.password" [(ngModel)]="USER.password">
     <br>
     <input type="submit" value="Login Now">
   </form>

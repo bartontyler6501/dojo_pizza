@@ -11,6 +11,7 @@ module.exports = {
         .then(data => res.json(data))
         .catch(err => res.json(err))
     },
+
     viewUser: (req, res) => {
         User.findById({_id: req.params.id})
         .then(data => res.json(data))
@@ -31,6 +32,14 @@ module.exports = {
         .then(data => res.json(data))
         .catch(err => res.json(err))
     },
+    LoginUser:(req,res)=>{
+        let email = req.params.email;
+        let password = req.body.password;
+        User.findOne({email: email, password: password})
+        // console.log(email,"***************found email****************")
+        .then(data => res.json(data))
+        .catch(err => res.json(err))
+    }, 
     allPizzas: (req, res) => {
         User.findById({_id: req.params.id})
         .then(data => res.json(data._pizza))

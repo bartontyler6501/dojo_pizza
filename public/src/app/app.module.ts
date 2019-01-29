@@ -13,6 +13,7 @@ import { OrderFrontComponent } from './order-front/order-front.component';
 import { OrderCustomComponent } from './order-custom/order-custom.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
+import { RouterModule,  Routes } from '@angular/router';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PaymentComponent } from './payment/payment.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
