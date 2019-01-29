@@ -7,11 +7,11 @@ import { LocationsComponent } from './locations/locations.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
-  { path: '/login', component: LoginComponent },
-  { path: '/', component: HomeComponent },
-  { path: '/order', component: OrderingComponent },
-  { path: '/locations', component: LocationsComponent },
-  { path: '/contacts', component: ContactsComponent }
+  { path: 'login', component: LoginComponent },
+  { path: '', component: HomeComponent },
+  { path: 'order', component: OrderingComponent },
+  { path: 'locations', component: LocationsComponent },
+  { path: 'contacts', component: ContactsComponent }
 ];
 
 @NgModule({
