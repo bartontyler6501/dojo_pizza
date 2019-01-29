@@ -8,6 +8,7 @@ module.exports = function(app){
     // Users
     app.post('/api/Users/', control.newUser);
     app.get('/api/Users', control.allUsers);
+    app.post('/api/Users/login/:email', control.LoginUser);
     app.get('/api/Users/:id', control.viewUser);
     app.put('/api/Users/:id', control.editUser);
     app.delete('/api/Users/:id', control.deleteUser);
