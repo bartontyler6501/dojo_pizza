@@ -8,6 +8,10 @@ import { OrderingComponent } from './ordering/ordering.component';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LocationsComponent } from './locations/locations.component';
+import { OrderFrontComponent } from './order-front/order-front.component';
+import { OrderCustomComponent } from './order-custom/order-custom.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { LocationsComponent } from './locations/locations.component';
     OrderingComponent,
     HomeComponent,
     ContactsComponent,
-    LocationsComponent
+    LocationsComponent,
+    OrderFrontComponent,
+    OrderCustomComponent,
+    CheckoutComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
