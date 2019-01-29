@@ -27,10 +27,16 @@ const UserSchema = new mongoose.Schema({
 );
 User = mongoose.model('Users', UserSchema);
 
-const NormalPizzasSchema = new mongoose.Schema({
-        _pizza: [PizzaSchema]
+const MenuSchema = new mongoose.Schema({
+        title: { type: String, required: [true, "Title is required."]},
+        crust_type: {type: String, required: [true, "You must pick a crust"]},
+        sauce: {type: String, required: [true, "Must pick a sauce"]},
+        toppings:{type: [String]}
 }, {timestamps: true}
 );
 
-
-module.exports = User;
+Schemas = {
+        User: mongoose.model('Users', UserSchema),
+        Menu: mongoose.model("NormalPizzas", MenuSchema)
+}
+module.exports = Schemas;
