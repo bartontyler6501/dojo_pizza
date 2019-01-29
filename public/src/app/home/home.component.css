@@ -1,0 +1,21 @@
+* {
+    vertical-align: baseline;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    display: block;
+    font-size: 30px;
+}
+#pic1 {
+    width: 300px;
+}
+p {
+    font-size: 15px;
+}

@@ -1,26 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="titlaDiv">
+    <h1>{{ title }}</h1>
+    <button class="login">Log In</button>
+</div>
 
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-  </div>
-s
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="www.youtube.com">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+  
+  <button *ngIf="(current == 'home'); else homeBlock" (click)="home()" class="active">Home</button>
+  <ng-template #homeBlock><button (click)="home()">Home</button></ng-template>
+  <button *ngIf="current == 'order'; else orderBlock" (click)="order()" class="active">Order Online</button>
+  <ng-template #orderBlock><button (click)="order()">Order Online</button></ng-template>
+  <button *ngIf="current == 'location'; else locationBlock" (click)="location()" class="active">Locations</button>
+  <ng-template #locationBlock><button (click)="location()">Locations</button></ng-template>
+  <button *ngIf="current == 'contact'; else contactBlock" (click)="contact()" class="active">Contact Us</button>
+  <ng-template #contactBlock><button (click)="contact()">Contact Us</button></ng-template>
 
+</div>
 
 
 <router-outlet></router-outlet>
