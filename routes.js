@@ -15,7 +15,4 @@ module.exports = function(app){
     app.get('/api/Users/:userId/pizzas/:pizzaId', control.viewPizza);
     // app.delete('/api/Users/:userId/pizzas/:pizzaId', control.deletePizza);
     // app.edit('/api/Users/:id/pizzas/:id', control.editPizza);
-
-    
-    // Hey Tyler it's Mason
 }
